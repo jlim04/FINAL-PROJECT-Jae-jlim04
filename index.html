@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.js"></script>
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="style2.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <header>
+
+  </header>
+  <main role="main" class="container">
+    <div id="globe1">
+
+      <h1>2022 Qatar World Cup Data Visualization</h1>
+
+
+
+      <div id="country"></div>
+      <h3>Legend Indicating Exit Round</h3>
+      <div id="legend">
+        <label id="finalCheckbox" class="containerCheck">Finals
+          <input id="finals" type="checkbox" checked="checked" onclick="drawGlobe()">
+          <span class="checkmark"></span>
+        </label>
+
+        <label id="semifinalCheckbox" class="containerCheck">Semifinals
+          <input id="semifinals" type="checkbox" checked="checked" onclick="drawGlobe()">
+          <span class="checkmark"></span>
+        </label>
+
+        <label id="quarterfinalCheckbox" class="containerCheck">Quarterfinals
+          <input id="quarterfinals" type="checkbox" checked="checked" onclick="drawGlobe()">
+          <span class="checkmark"></span>
+        </label>
+
+        <label id="RO16Checkbox" class="containerCheck">Round of 16
+          <input id="RO16" type="checkbox" checked="checked" onclick="drawGlobe()">
+          <span class="checkmark"></span>
+        </label>
+
+        <label id="GroupStageCheckbox" class="containerCheck">GroupStage
+          <input id="GroupStage" type="checkbox" checked="checked" onclick="drawGlobe()">
+          <span class="checkmark"></span>
+        </label>
+
+
+      </div>
+
+      <div id="myChart" class="svg-container"></div>
+
+
+    </div>
+    <div id="globe2">
+      <h1>All Time World Cup Winners (From 1930 to 2022) : Data Visualization</h1>
+
+      <div id="country2"></div>
+      <h3>Legend Indicating Amount of World Cup Trophies</h3>
+      <div id="legend2">
+
+
+        <label id="FiveTrophies" class="containerCheck">5 Trophies
+          <input id="FiveTrophiesCheckBox" type="checkbox" checked="checked" onclick="drawGlobe()">
+          <span class="checkmark"></span>
+        </label>
+
+        <label id="FourTrophies" class="containerCheck">4 Trophies
+          <input id="FourTrophiesCheckBox" type="checkbox" checked="checked" onclick="drawGlobe()">
+          <span class="checkmark"></span>
+        </label>
+
+        <label id="ThreeTrophies" class="containerCheck">3 Trophies
+          <input id="ThreeTrophiesCheckBox" type="checkbox" checked="checked" onclick="drawGlobe()">
+          <span class="checkmark"></span>
+        </label>
+
+        <label id="TwoTrophies" class="containerCheck">2 Trophies
+          <input id="TwoTrophiesCheckBox" type="checkbox" checked="checked" onclick="drawGlobe()">
+          <span class="checkmark"></span>
+        </label>
+
+        <label id="OneTrophy" class="containerCheck">1 Trophy
+          <input id="OneTrophyCheckBox" type="checkbox" checked="checked" onclick="drawGlobe()">
+          <span class="checkmark"></span>
+        </label>
+
+
+      </div>
+
+      <div id="myChart2" class="svg-container"></div>
+
+
+
+    </div>
+
+    <div id="context">
+      <h1>Additional Context</h1>
+      <p>Soccer or football is often recognized as the world’s premier sport in terms of popularity. Thousands of people gather to view games daily, whether in-person or online. At the peak of the sport of football is the World Cup which typically takes place once every four years. As the world’s largest sporting event, billions of people stream the World Cup. Most recently, the 2022 World Cup took place in Qatar in which Argentina took the trophy after a thrilling win against previous champions France.</p>
+      <p>In an attempt to visualize and analyze the performance of the participants in the 2022 Qatar World Cup, a Google Colab was created. Data was imported from Kaggle, a website that provided a dataset regarding every single match played at the recent World Cup. Using this dataset and utilizing certain statistics exhibited in the match statistics, an interesting array of average facts were created. For each country that participated in the World Cup, multiple tables and scatterplots indicating their average win ratio, possession ratio, goals scored, goals conceded, and more were created. From this, a general assertion was made for the association of these variables. In summary, the average possession ratio, average goals scored, and average goals conceded did not affect a country’s average win ratio to the extent as hypothesized; the positive association between sets of variables was mainly weak.</p>
+      <p>Whereas Google Colab attempted to assert an argument on variables that may affect win ratios, the first graph shown is a venture to represent the performance and result of each World Cup participant. For those who purely wish to look at the performance of each country, the color coding within the globe shows who participated and what stage of the World Cup they made it until. To make this observation even more convenient, a checkbox that reveals countries that made it to certain rounds was added. To gain access to some of the statistics exhibited on the Google Colab, if one’s mouse hovers over a certain country, a box portrays those facts adjacent to those countries. In summary, the first visual interactive graph is a general representation of what occurred in the 2022 world cup, and depending on the interests of the user, they are able to select what they can access.</p>
+      <p>The second visual interactive graph is an extension of the first. For those who wish to learn more about the World Cup tournament’s history, the second graph portrays the World Cup winners across all the tournaments. The graph makes color distinctions depending on how many trophies that countries have accumulated. Like the previous graph, users are able to utilize each checkbox to handpick countries by the number of trophies they have. When hovering one’s mouse over the colored countries, various statistics that a common football fan may be curious about can be shown in a box adjacent to the country. When combining the history of the World Cup tournament represented in the second graph and the most recent results of the 2022 World Cup, the fact that Argentina won and France was in the finals makes a lot of sense. Historically, when looking at the history of the World Cup, South American and European countries have dominated the tournament, which is once again shown in the Qatar World Cup.</p>
+         <p>In conclusion, whereas the Google Colab is more of an assertion using scatterplots and tables, the two interactive visual graphs attempt to show interesting statistics and facts about the history of the tournament and the most recent World Cup for the average football fan.</p>
+        
+    </div>
+
+  </main>
+
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+  <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+
+
+  <script src="d3_script1.js"></script>
+  <script src="d3_script2.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+
+
+
+  <footer>
+    <p style="text-align: center">Jae Lim ©2023</p>
+  </footer>
+</body>
+
+</html>
